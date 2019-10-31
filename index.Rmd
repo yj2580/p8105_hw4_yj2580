@@ -10,9 +10,11 @@ Welcome to my website!
 This website includes many information about myself and some plots I created.
 
 ## About me
+
 Your can learn more about me from [here](about.html).
 
-![](images/minions.gif)
+<img src="images/minions.gif" style="width:75%">
+
 
 ## Some useful links
 
@@ -23,4 +25,5 @@ I usually watch videos [here](https://www.youtube.com/).
 Most fancy restaurants can be found [here](https://www.yelp.com/).
 
 ## My professional experience
+
 You can find my resume [here](resume.html)
