@@ -27,3 +27,7 @@ Most fancy restaurants can be found [here](https://www.yelp.com/).
 ## My professional experience
 
 You can find my resume [here](resume.html)
+
+## Interactive plots
+
+You can find some plots about instacart [here](dashboard.html)
