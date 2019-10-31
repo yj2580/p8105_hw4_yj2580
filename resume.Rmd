@@ -1,0 +1,6 @@
+---
+title: "Resume"
+author: "Yeqing Ji"
+output: html_document
+---
+![](images/resume.png)
