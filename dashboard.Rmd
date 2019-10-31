@@ -17,12 +17,10 @@ data("instacart")
 ```
 
 
-Column {data-width=600}
+Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A: Box plots
-
-#### Comparing the distribution of the time when top 5 popular products in aisle "baking ingredients" are ordered
+### Comparing the distribution of the time when top 5 popular products in aisle "baking ingredients" are ordered
 
 ```{r, echo=FALSE}
 bak_ing = instacart %>%
@@ -42,12 +40,10 @@ inner_join(instacart, bak_ing, by = "product_name") %>%
 
 
 
-Column {data-width=400}
+Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B: Line plots
-
-#### Compare the mean hour of the day on each day of the week at which Pink Lady apples vs Coffee Ice Cream vs Black Beans are ordered
+### Compare the mean hour of the day on each day of the week at which Pink Lady apples vs Coffee Ice Cream vs Black Beans are ordered
 
 ```{r, echo=FALSE}
 pink_lady = instacart %>%
@@ -72,9 +68,7 @@ rbind(pink_lady, coff_ice, black_beans) %>%
                       range = c(11:15.5)))
 ```
 
-### Chart C: bar plots
-
-#### The number of items ordered in each aisle which has been ordered more than 20000 items
+### The number of items ordered in each aisle which has been ordered more than 20000 items
 
 ```{r, echo=FALSE}
 instacart %>%
