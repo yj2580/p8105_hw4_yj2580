@@ -3,4 +3,4 @@ title: "Resume"
 author: "Yeqing Ji"
 output: html_document
 ---
-![](images/resume.png)
+<img src="images/resume.png" style="width:75%">
