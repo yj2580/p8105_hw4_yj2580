@@ -10,18 +10,18 @@ I come from China, and I grow up in Shanghai. I studied pharmaceutical science b
 
 Let me show you a wonderful picture of my hometown.
 
-![](images/hometown.jpg)
+<img src="images/hometown.jpg" style="width:75%">
 
 This is my favourite food for breakfast in China, I MISS IT A LOT.
 
-![](images/breakfast.jpg)
+<img src="images/breakfast.jpg" style="width:75%">
 
 my previous life:
 
-![](images/lab.jpg)
+<img src="images/lab.jpg" style="width:75%">
 
 my life for now:
 
-![](images/coding.jpg)
+<img src="images/coding.jpg" style="width:75%">
 
 Now I am worried about hair loss everyday lol
