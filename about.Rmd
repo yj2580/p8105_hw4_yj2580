@@ -1,0 +1,23 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+I come from China, and I grow up in Shanghai. I studied pharmaceutical science before. After graduation from Fudan University, I came to this amazing city to pursue master of science degree in Biostatistics in Columbia University.
+
+Let me show you a wonderful picture of my hometown.
+![](images/hometown.jpg)
+
+This is my favourite food for breakfast in China, I MISS IT A LOT.
+![](images/breakfast.jpg)
+
+my previous life:
+![](images/lab.jpg)
+
+my life for now:
+![](images/coding.jpg)
+
+Now I am worried about hair loss everyday lol
