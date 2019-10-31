@@ -1,0 +1,89 @@
+---
+title: "Interactive plots"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+library(data.table)
+data("instacart")
+```
+
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Chart A: Box plots
+
+#### Comparing the distribution of the time when top 5 popular products in aisle "baking ingredients" are ordered
+
+```{r, echo=FALSE}
+bak_ing = instacart %>%
+  filter(aisle == "baking ingredients") %>%
+  group_by(product_name) %>%
+  summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  head(5) 
+inner_join(instacart, bak_ing, by = "product_name") %>%
+  mutate(order_hour_of_day = as.numeric(order_hour_of_day),
+         product_name = fct_reorder(product_name, order_hour_of_day)) %>%
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "Set2")%>%
+  layout(xaxis = list(title = "Product name"), 
+         yaxis = list(title = "Ordered hour of the day",
+                      range = c(0:24)))
+```
+
+
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Chart B: Line plots
+
+#### Compare the mean hour of the day on each day of the week at which Pink Lady apples vs Coffee Ice Cream vs Black Beans are ordered
+
+```{r, echo=FALSE}
+pink_lady = instacart %>%
+  filter(product_name %like% "Pink Lady Apples") %>%
+  group_by(order_dow) %>%
+  summarize(mean_hour_of_day = mean(order_hour_of_day)) %>%
+  mutate(product_name = "Pink Lady Apples")
+coff_ice = instacart %>%
+  filter(product_name %like% "Coffee Ice Cream") %>%
+  group_by(order_dow) %>%
+  summarize(mean_hour_of_day = mean(order_hour_of_day)) %>%
+  mutate(product_name = "Coffee Ice Cream")
+black_beans = instacart %>%
+  filter(product_name %like% "Black Beans") %>%
+  group_by(order_dow) %>%
+  summarize(mean_hour_of_day = mean(order_hour_of_day)) %>%
+  mutate(product_name = "Black Beans")
+rbind(pink_lady, coff_ice, black_beans) %>%
+  plot_ly(x = ~order_dow, y = ~mean_hour_of_day, color = ~product_name, type = "scatter", mode = "lines") %>%
+  layout(xaxis = list(title = "Ordered day of the week"),
+         yaxis = list(title = "Mean hour of the day",
+                      range = c(11:15.5)))
+```
+
+### Chart C: bar plots
+
+#### The number of items ordered in each aisle which has been ordered more than 20000 items
+
+```{r, echo=FALSE}
+instacart %>%
+  group_by(aisle, department) %>%
+  summarize(n = n()) %>%
+  filter(n>20000) %>%
+  plot_ly(x = ~aisle, y = ~n, color = ~department, type = "bar") %>%
+  layout(xaxis = list(title = "Aisle"),
+         yaxis = list(title = "The number of items",
+                      range = c(0:155000)))
+```
+
