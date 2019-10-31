@@ -1,7 +1,8 @@
 ---
 title: "Resume"
-author: "Yeqing Ji"
-output: html_document
-theme: superhero
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 <iframe src="resume.pdf" width="100%" height="1000px">

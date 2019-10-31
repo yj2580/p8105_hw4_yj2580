@@ -15,6 +15,8 @@ navbar:
       href: http://github.com/yj2580/
     - icon: fas fa-address-book
       href: https://www.linkedin.com/in/yeqing-ji-5b75a0130/
-output:
+output: 
   html_document:
-    theme: superhero
+    toc: true
+    toc_float: true
+    theme: flatly
