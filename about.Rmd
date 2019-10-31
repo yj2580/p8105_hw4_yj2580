@@ -4,6 +4,7 @@ output:
   html_document:
     toc: true
     toc_float: true
+    theme: superhero
 ---
 
 I come from China, and I grow up in Shanghai. I studied pharmaceutical science before. After graduation from Fudan University, I came to this amazing city to pursue master of science degree in Biostatistics in Columbia University.
