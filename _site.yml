@@ -13,4 +13,4 @@ navbar:
       href: https://www.linkedin.com/in/yeqing-ji-5b75a0130/
 output:
   html_document:
-    theme: lumen
+    theme: superhero
